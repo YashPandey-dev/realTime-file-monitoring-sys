@@ -1,0 +1,266 @@
+/* Dashboard Specific Styles */
+body.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to right top, #e3f2fd, #ffffff);
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  background: linear-gradient(90deg, #1f3a93, #8e44ad);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.dashboard-nav {
+  margin-top: 1rem;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  background-color: #4b6cb7;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #3a5a9b;
+}
+
+/* Main Content Layout */
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table Pair Container */
+.table-pair-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  /* Horizontal spacing between tables */
+  margin-bottom: 5rem;
+}
+
+/* Individual Table Container */
+.file-table-container {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-table-container h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #4b6cb7;
+}
+
+/* Table Styles */
+.table-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead {
+  background: #4b6cb7;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Chart Container */
+.chart-container {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  /* Space above chart */
+}
+
+.chart-container h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#summaryChart {
+  width: 100% !important;
+  height: 400px !important;
+}
+
+/* Footer */
+.dashboard-footer {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+/* Status colors */
+.status-good {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.status-missing {
+  color: #c62828;
+  font-weight: 700;
+}
+
+.status-delayed {
+  color: #f9a825;
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+.status-expected {
+  color: #2196F3;
+  font-weight: 700;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Manual Button */
+.manual-btn {
+  padding: 0.4rem 0.8rem;
+  background-color: #4b6cb7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.manual-btn:hover {
+  background-color: #3a5a9b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .table-pair-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .file-table-container {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .file-table-container,
+  .chart-container {
+    padding: 1rem;
+  }
+}
+
+/* Alert Styles */
+.alert {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.alert-success {
+  background-color: #4CAF50;
+}
+
+.alert-error {
+  background-color: #F44336;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

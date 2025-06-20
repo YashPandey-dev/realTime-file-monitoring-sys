@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>File Monitoring Dashboard</title>
+  <link rel="stylesheet" href="dashboard-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
+</head>
+
+<body class="dashboard">
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>File Monitoring Dashboard</h1>
+      <div id="last-updated">Last updated: Loading...</div>
+      <nav class="dashboard-nav">
+        <a href="index.html" class="nav-link">Detailed View</a>
+      </nav>
+    </header>
+
+    <main class="dashboard-main">
+      <!-- First Pair: METAR and SYNOP -->
+      <div class="table-pair-container">
+        <div class="file-table-container">
+          <h2>🛰 METAR Files</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Filename</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="metar-table-body">
+                <!-- Will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="file-table-container">
+          <h2>🌤 SYNOP Files</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Filename</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="synop-table-body">
+                <!-- Will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Pair: BUOY and SHIP -->
+      <div class="table-pair-container">
+        <div class="file-table-container">
+          <h2>🌊 BUOY Files</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Filename</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="buoy-table-body">
+                <!-- Will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="file-table-container">
+          <h2>🚢 SHIP Files</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Filename</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="ship-table-body">
+                <!-- Will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="chart-container table-single-container">
+        <h2>📊 Status Summary</h2>
+        <canvas id="summaryChart"></canvas>
+      </div>
+    </main>
+
+    <footer class="dashboard-footer">
+      <p>File Monitoring System © 2025 | Last updated: <span id="footer-updated">Loading...</span></p>
+    </footer>
+  </div>
+
+  <!-- Socket.IO CDN -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Dashboard JavaScript -->
+  <script src="dashboard.js"></script>
+</body>
+
+</html>

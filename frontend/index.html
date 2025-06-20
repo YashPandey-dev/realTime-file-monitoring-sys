@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>File Monitoring System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>File List</h2>
+      <nav>
+        <a href="dashboard.html" class="tab-btn dashboard">📊 Dashboard</a>
+        <button class="tab-btn active" data-type="metar">METAR</button>
+        <button class="tab-btn" data-type="synop">SYNOP</button>
+        <button class="tab-btn" data-type="buoy">BUOY</button>
+        <button class="tab-btn" data-type="ship">SHIP</button>
+      </nav>
+      <div class="toggle-wrapper">
+        <label for="dark-mode-toggle">Dark Mode</label>
+        <label class="switch">
+          <input type="checkbox" id="dark-mode-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <h1 id="file-title">🛰 METAR File Status</h1>
+        <div id="last-updated"></div>
+      </header>
+
+      <!-- Table Section -->
+      <section id="dashboard-content" class="glass">
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Date & Time</th>
+                <th>Filename</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="status-table-body">
+              <!-- JS will populate this -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- Pie Chart Section -->
+      <section id="chart-section">
+        <canvas id="statusChart"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <!-- Socket.IO CDN -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Your JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
