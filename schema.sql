@@ -1,3 +1,5 @@
+/* This is not a part of IDE run these commands in SQl workbench */
+
 CREATE DATABASE IF NOT EXISTS files_monitoring;
 USE files_monitoring;
 
