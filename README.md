@@ -61,7 +61,7 @@ To set up the project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YashPandey-dev/realTime-file-mangement-sys.git](https://github.com/YashPandey-dev/realTime-file-mangement-sys.git)
+    git clone https://github.com/YashPandey-dev/realTime-file-mangement-sys.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
