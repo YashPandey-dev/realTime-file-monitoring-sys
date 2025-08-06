@@ -121,7 +121,7 @@ To set up the project locally, follow these steps:
 ## Video and Image Demo
 
 * [Watch a full website demo on YouTube](https://www.youtube.com/watch?v=xfbzeQtxJ-U)
-* [Watch email notifications for missing files](https://www.youtube.com/channel/UCgEcWRygTUbaAWHbT2OhvMg/community?lb=UgkxQQ_aShmHksHE876oOhXMBuclwIUephJ1)
+* [Watch email notifications for missing files](http://youtube.com/post/UgkxQQ_aShmHksHE876oOhXMBuclwIUephJ1?si=THEgCMqf0BuJdPEc)
 
 ## Contact
 
